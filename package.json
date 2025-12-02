@@ -7,13 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "oxlint"
+    "lint": "oxlint",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.17",
+    "oxfmt": "^0.16.0",
     "oxlint": "^1.31.0",
     "tailwindcss": "^4.1.17",
     "vite": "^7.2.6"
