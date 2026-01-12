@@ -61,33 +61,23 @@ Create a `.oxlintrc.json` file in your project root:
   "plugins": ["typescript"],
   "jsPlugins": ["eslint-plugin-better-tailwindcss"],
   "rules": {
-    "better-tailwindcss/enforce-consistent-class-order": [
-      "warn",
-      { "entryPoint": "src/style.css" }
-    ],
-    "better-tailwindcss/no-conflicting-classes": [
-      "error",
-      { "entryPoint": "src/style.css" }
-    ],
-    "better-tailwindcss/no-duplicate-classes": [
-      "warn",
-      { "entryPoint": "src/style.css" }
-    ],
-    "better-tailwindcss/no-unnecessary-whitespace": [
-      "warn",
-      { "entryPoint": "src/style.css" }
-    ],
-    "better-tailwindcss/no-unregistered-classes": [
-      "error",
-      { "entryPoint": "src/style.css" }
-    ]
+    "better-tailwindcss/enforce-consistent-class-order": "warn",
+    "better-tailwindcss/no-conflicting-classes": "error",
+    "better-tailwindcss/no-duplicate-classes": "warn",
+    "better-tailwindcss/no-unnecessary-whitespace": "warn",
+    "better-tailwindcss/no-unregistered-classes": "error"
+  },
+  "settings": {
+    "better-tailwindcss": {
+      "entryPoint": "src/style.css"
+    }
   }
 }
 ```
 
 ### Step 3: Configure the Entry Point
 
-The `entryPoint` option is critical for Tailwind CSS v4. It should point to your main CSS file that imports Tailwind:
+The `entryPoint` settings option is critical for Tailwind CSS v4. It should point to your main CSS file that imports Tailwind:
 
 ```css
 /* src/style.css */
